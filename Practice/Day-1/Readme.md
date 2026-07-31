@@ -1,46 +1,45 @@
-# 🚀 Salesforce Interview Readiness Bootcamp - Day 1
+# 🚀 Salesforce Developer Bridge Program – Day 1
 
-## 📌 Project
+## 📌 Overview
 
-**CRM Fundamentals & Salesforce Setup**
+Day 1 focused on strengthening my Salesforce development fundamentals through hands-on practice. I revised data modeling, Apex, SOQL, Triggers, and Lightning Web Components (LWC) by building and testing solutions in a Salesforce Playground.
 
-## 📖 Overview
+---
 
-Day 1 focused on understanding the basics of Salesforce CRM and setting up the development environment. I learned how Salesforce manages customer information and how different business processes are represented using standard CRM objects.
+## 📚 Topics Covered
 
-## ✅ Activities Completed
+* Data Modeling
+* Object Relationships
+* Apex Basics
+* SOQL
+* Apex Triggers
+* Trigger Handler Pattern
+* Lightning Web Components (LWC)
 
-* Learned Salesforce CRM fundamentals
-* Understood the Lead to Opportunity process
-* Explored standard objects:
+---
 
-  * Account
-  * Contact
-  * Lead
-  * Opportunity
-* Created and configured a Trailhead Playground
-* Explored the Salesforce Lightning Interface
+## 💻 What I Learned
 
-## 📚 Key Learnings
+* Designed custom objects and relationships.
+* Practiced writing and executing Apex code.
+* Wrote SOQL queries using `WHERE`, `ORDER BY`, `LIMIT`, relationship, and aggregate functions.
+* Created Apex Triggers with a separate Trigger Handler class.
+* Implemented validation and related record updates using triggers.
+* Built a basic LWC using the `@wire` decorator to display Salesforce records.
 
-* Basics of Salesforce CRM
-* Standard Objects
-* Business Process Flow
-* Salesforce Navigation
-* Trailhead Playground
+---
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-* Salesforce Platform
-* Trailhead
-* Developer Org
+* Salesforce Playground
+* Apex
+* SOQL
+* Apex Triggers
+* Lightning Web Components (LWC)
+* Lightning App Builder
 
-## 📸 Screenshots
-
-* Salesforce Dashboard
-* Trailhead Badges
-* CRM Object Overview
+---
 
 ## 🎯 Outcome
 
-Successfully understood Salesforce fundamentals and prepared the development environment for upcoming hands-on activities.
+This learning session improved my understanding of Salesforce development by strengthening my skills in Apex programming, SOQL querying, Trigger development, and Lightning Web Components while following Salesforce best practices.
