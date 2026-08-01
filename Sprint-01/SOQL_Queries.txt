@@ -1,22 +1,56 @@
+=========================================
+Sprint 01 - SOQL Practice
+Library Management System
+=========================================
+
+1. WHERE Clause Query
+---------------------
+
 SELECT Name, Author__c, Status__c
 FROM Book__c
-WHERE Status__c = 'Available'
----
+WHERE Status__c = 'Available';
+
+
+=========================================
+
+2. ORDER BY + LIMIT
+-------------------
+
 SELECT Name, Issue_Date__c
 FROM Book_Issue__c
 ORDER BY Issue_Date__c DESC
-LIMIT 5
----
+LIMIT 5;
+
+
+=========================================
+
+3. Relationship Query (Child-to-Parent)
+---------------------------------------
+
 SELECT Name,
        Book__r.Name,
        Member__r.Name,
        Issue_Date__c,
        Return_Date__c
-FROM Book_Issue__c
----
+FROM Book_Issue__c;
+
+
+=========================================
+
+4. Aggregate Query (COUNT)
+--------------------------
+
 SELECT COUNT(Id)
-FROM Book_Issue__c
----
+FROM Book_Issue__c;
+
+
+=========================================
+
+5. Comparison Operator (>=)
+---------------------------
+
 SELECT Name, Available_Copies__c
 FROM Book__c
-WHERE Available_Copies__c >= 5
+WHERE Available_Copies__c >= 5;
+
+=========================================
