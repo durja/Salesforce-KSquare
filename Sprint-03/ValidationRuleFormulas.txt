@@ -6,9 +6,7 @@ Rule:
 Student CGPA must be greater than or equal to the Job's minimum CGPA.
 
 Formula:
-
 CGPA__c < Minimum_CGPA__c
-
 
 =========================================
 Validation Rule 2
@@ -18,9 +16,7 @@ Rule:
 Application Date cannot be after the Job Closing Date.
 
 Formula:
-
 Application_Date__c > Job_Closing_Date__c
-
 
 =========================================
 Validation Rule 3
@@ -30,7 +26,6 @@ Rule:
 Mandatory fields cannot be left blank.
 
 Formula:
-
 OR(
 ISBLANK(Student__c),
 ISBLANK(Job__c)
