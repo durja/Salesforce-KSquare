@@ -1,13 +1,5 @@
-/*
-=========================================
-Sprint 02 - Apex Collections Practice
-Library Management System
-=========================================
-*/
-
 System.debug('========== LIST ==========');
 
-// List Example
 List<String> cities = new List<String>{
     'Hyderabad',
     'Chennai',
@@ -23,7 +15,6 @@ for(String city : cities){
 
 System.debug('========== SET ==========');
 
-// Set Example
 Set<Id> bookIds = new Set<Id>();
 
 for(Book__c book : [
@@ -38,7 +29,6 @@ System.debug('Total Unique Books : ' + bookIds.size());
 
 System.debug('========== MAP ==========');
 
-// Map Example
 Map<Id, Book__c> bookMap = new Map<Id, Book__c>(
     [SELECT Id, Name, Author__c, Status__c
      FROM Book__c]
