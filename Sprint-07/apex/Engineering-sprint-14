@@ -1,0 +1,27 @@
+/* StatisticsService */
+
+public with sharing class StatisticsService {
+
+    public static void updatePlacementStatistics(List<Application__c> applications) {
+        
+        Integer totalSelected = [
+            select COUNT()
+            from Application__c
+            where Status__c = 'Selected'
+        ];
+
+        System.debug('totalSelected=' +totalSelected);
+
+    }
+
+}
+
+/* ApplicationTrigger */
+
+trigger ApplicationTrigger on Application__c (after update) {
+    
+    if(trigger.isBefore && trigger.isAfter){
+        
+        StatisticsService.updatePlacementStatistics(Trigger.new);
+    }
+}
