@@ -1,4 +1,4 @@
-# 🚀 Placement Management System – Sprint 5
+# 🚀 Placement Management System 
 
 A Salesforce Apex project demonstrating how to retrieve, validate, create, and update placement application records using **SOQL**, **DML**, and **Apex**.
 
