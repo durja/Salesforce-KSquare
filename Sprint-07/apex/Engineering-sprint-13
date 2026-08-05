@@ -1,4 +1,5 @@
 /* ApplicationService class*/
+
 public class ApplicationService {
     public static void ValidateApplications(List<Application__c> applications){
         for(Application__c app : applications){
@@ -23,7 +24,8 @@ public class ApplicationService {
     }
 
 }
-/* ApplicationTrigger trigger */
+
+/* trigger */
 
 trigger ApplicationTrigger on Application__c (before insert) {
     if(trigger.isBefore && trigger.isAfter){
