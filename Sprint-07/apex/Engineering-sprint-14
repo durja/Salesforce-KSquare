@@ -16,7 +16,7 @@ public with sharing class StatisticsService {
 
 }
 
-/* ApplicationTrigger */
+/* Trigger */
 
 trigger ApplicationTrigger on Application__c (after update) {
     
