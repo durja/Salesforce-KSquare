@@ -1,133 +1,106 @@
-# 🚀 Sprint 7 – Bulk Processing and Governor Limits
+# 🚀 Sprint 8 – Bulk Processing and Governor Limits
 
 ## 📖 Overview
 
-This sprint focused on designing bulk-safe Apex code using Bulkification techniques and Salesforce Governor Limits. The implementation ensures efficient processing of multiple records while following Salesforce best practices.
+Sprint 7 focused on developing scalable and bulk-safe Apex solutions by applying Salesforce Bulkification techniques and Governor Limits. The primary objective was to process multiple records efficiently while following Salesforce best practices and enterprise development standards.
 
 ---
 
-## 🎯 Objectives
+## 🎯 Sprint Objectives
 
-- Understand Governor Limits
-- Learn Bulkification
-- Optimize SOQL & DML
-- Design bulk-safe Triggers
-- Improve scalability
-
----
-
-## 🛠️ What I Implemented
-
-- Bulk-safe Trigger development
-- Bulkified validation logic
-- Used Lists, Sets, and Maps
-- Bulk SOQL queries
-- Bulk DML operations
-- Trigger Context Variables
-- Trigger Handler architecture
-- Governor Limit optimization
+* Understand Salesforce Governor Limits.
+* Learn the concept of Bulkification.
+* Process multiple records using collections.
+* Optimize SOQL and DML operations.
+* Build bulk-safe Apex and Triggers.
+* Improve application performance and scalability.
 
 ---
 
-## 📚 Key Concepts
+## 🛠️ Implementation Tasks
 
-- Governor Limits
-- Bulkification
-- Bulk Processing
-- Trigger.new & Trigger.old
-- Trigger.newMap & Trigger.oldMap
-- Lists, Sets & Maps
+During this sprint, I successfully implemented the following:
+
+* Designed bulk-safe Apex logic.
+* Processed multiple records using collection-based processing.
+* Used Lists, Sets, and Maps for efficient record handling.
+* Collected unique Student and Job IDs using Sets.
+* Retrieved related records using bulk SOQL queries.
+* Stored queried records in Maps for quick access.
+* Applied bulk-safe validation for application processing.
+* Eliminated SOQL queries inside loops.
+* Eliminated DML operations inside loops.
+* Used Trigger Context Variables for record processing.
+* Applied Trigger Handler architecture.
+* Optimized Apex code to comply with Governor Limits.
+* Tested the application with both single and bulk record scenarios.
 
 ---
 
-## 💻 Code Snippets
+## 📚 Concepts Covered
 
-### Trigger
-
-```apex
-trigger ApplicationTrigger on Application__c (before insert) {
-    ApplicationService.validateApplications(Trigger.new);
-}
-```
-
-### Collect IDs using Set
-
-```apex
-Set<Id> studentIds = new Set<Id>();
-
-for (Application__c app : Trigger.new) {
-    if (app.Student__c != null) {
-        studentIds.add(app.Student__c);
-    }
-}
-```
-
-### Bulk SOQL
-
-```apex
-Map<Id, Student__c> studentMap =
-new Map<Id, Student__c>([
-    SELECT Id, Name, CGPA__c, Backlogs__c
-    FROM Student__c
-    WHERE Id IN :studentIds
-]);
-```
-
-### Process Records
-
-```apex
-for (Application__c app : Trigger.new) {
-
-    Student__c student = studentMap.get(app.Student__c);
-
-    if (student != null && student.CGPA__c < 7) {
-        app.addError('CGPA should be at least 7.');
-    }
-}
-```
-
-### Bulk DML
-
-```apex
-List<Application__c> applicationsToUpdate =
-    new List<Application__c>();
-
-for (Application__c app : Trigger.new) {
-    app.Status__c = 'Validated';
-    applicationsToUpdate.add(app);
-}
-
-if (!applicationsToUpdate.isEmpty()) {
-    update applicationsToUpdate;
-}
-```
+* Governor Limits
+* Bulkification
+* Bulk Processing
+* Trigger Context Variables
+* Trigger.new
+* Trigger.old
+* Trigger.newMap
+* Trigger.oldMap
+* Lists
+* Sets
+* Maps
+* Bulk SOQL
+* Bulk DML
+* Trigger Handler Pattern
+* Collection-Based Processing
+* Enterprise Apex Development
 
 ---
 
 ## ✅ Best Practices Followed
 
-- Bulk-safe Apex
-- One SOQL query
-- One DML operation
-- Used Lists, Sets & Maps
-- No SOQL inside loops
-- No DML inside loops
-- Collection-based processing
-- Clean Trigger architecture
+* Bulk-safe Apex development.
+* Collection-based record processing.
+* One SOQL query whenever possible.
+* One DML operation for multiple records.
+* Removed SOQL inside loops.
+* Removed DML inside loops.
+* Separated Trigger logic from business logic.
+* Followed Salesforce Governor Limits.
+* Built reusable and maintainable Apex code.
 
 ---
 
-## 🛠️ Skills Gained
+## 🧪 Testing Performed
 
-- Apex Programming
-- Bulk Processing
-- Governor Limits
-- Salesforce Triggers
-- SOQL & DML
-- Enterprise Apex Design
+* Verified single record processing.
+* Verified bulk record processing.
+* Tested application validation.
+* Verified Trigger execution.
+* Verified bulk-safe SOQL execution.
+* Verified bulk-safe DML execution.
+* Tested collection-based processing.
+* Confirmed Governor Limit compliance.
+
+---
+
+## 💡 Skills Gained
+
+* Apex Programming
+* Bulk Processing
+* Governor Limits
+* Bulkification
+* Salesforce Triggers
+* SOQL Optimization
+* DML Optimization
+* Lists, Sets & Maps
+* Trigger Context Variables
+* Trigger Handler Pattern
+* Enterprise Apex Development
 
 ---
 
 ## 🏁 Conclusion
 
-Successfully implemented bulk-safe Apex solutions using Bulkification, Governor Limits, and collection-based processing. This sprint improved my understanding of writing scalable and maintainable Salesforce applications.
+Sprint 8 enhanced my understanding of writing scalable Salesforce applications using Bulkification and Governor Limits. By implementing collection-based processing and following enterprise development practices, I developed bulk-safe Apex solutions that are efficient, maintainable, and capable of handling large volumes of records.
