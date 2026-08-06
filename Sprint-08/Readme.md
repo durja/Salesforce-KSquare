@@ -1,8 +1,8 @@
-# 🚀 Sprint 8 – Bulk Processing and Governor Limits
+# 🚀 Sprint 7 – Bulk Processing and Governor Limits
 
 ## 📖 Overview
 
-Sprint 8 focused on developing scalable and bulk-safe Apex solutions by applying Salesforce Bulkification techniques and Governor Limits. The primary objective was to process multiple records efficiently while following Salesforce best practices and enterprise development standards.
+Sprint 7 focused on developing scalable and bulk-safe Apex solutions by applying Salesforce Bulkification techniques and Governor Limits. The primary objective was to process multiple records efficiently while following Salesforce best practices and enterprise development standards.
 
 ---
 
@@ -103,4 +103,4 @@ During this sprint, I successfully implemented the following:
 
 ## 🏁 Conclusion
 
-Sprint 8 enhanced my understanding of writing scalable Salesforce applications using Bulkification and Governor Limits. By implementing collection-based processing and following enterprise development practices, I developed bulk-safe Apex solutions that are efficient, maintainable, and capable of handling large volumes of records.
+Sprint 7 enhanced my understanding of writing scalable Salesforce applications using Bulkification and Governor Limits. By implementing collection-based processing and following enterprise development practices, I developed bulk-safe Apex solutions that are efficient, maintainable, and capable of handling large volumes of records.
