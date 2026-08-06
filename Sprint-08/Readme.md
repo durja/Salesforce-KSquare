@@ -2,7 +2,7 @@
 
 ## 📖 Overview
 
-Sprint 7 focused on developing scalable and bulk-safe Apex solutions by applying Salesforce Bulkification techniques and Governor Limits. The primary objective was to process multiple records efficiently while following Salesforce best practices and enterprise development standards.
+Sprint 8 focused on developing scalable and bulk-safe Apex solutions by applying Salesforce Bulkification techniques and Governor Limits. The primary objective was to process multiple records efficiently while following Salesforce best practices and enterprise development standards.
 
 ---
 
