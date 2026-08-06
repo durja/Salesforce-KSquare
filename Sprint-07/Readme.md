@@ -1,4 +1,4 @@
-# Placement Management System – Enterprise Triggers
+# Sprint 6 Placement Management System – Enterprise Triggers
 
 ## 📌 Overview
 This sprint focuses on building clean and maintainable Salesforce Trigger architecture for the Placement Management System. Triggers are designed to respond to business events and delegate all business logic to specialized Service classes, following Salesforce best practices.
