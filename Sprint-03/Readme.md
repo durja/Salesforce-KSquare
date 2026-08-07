@@ -1,4 +1,4 @@
-# 🚀 Sprint 03 – Validation Rules, Flows & Declarative Automation
+# 🚀 Sprint 02 – Validation Rules, Flows & Declarative Automation
 
 ## 📌 Overview
 
