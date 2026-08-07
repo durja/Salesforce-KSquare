@@ -1,4 +1,4 @@
-# 🚀 Sprint 02 – Collections, Governor Limits & Asynchronous Apex
+# 🚀 Sprint 01 – Collections, Governor Limits & Asynchronous Apex
 
 ## 📌 Overview
 
