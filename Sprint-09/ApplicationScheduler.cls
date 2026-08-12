@@ -9,3 +9,13 @@ implements Schedulable{
         );
     }
 }
+
+/* Anonymous Execute window */
+
+String cron = '0 0 2 * * ?';
+
+System.schedule(
+    'Application Daily Batch',
+    cron,
+    new ApplicationScheduler()
+);
