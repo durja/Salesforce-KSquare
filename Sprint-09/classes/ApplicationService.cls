@@ -7,13 +7,3 @@ public with sharing class ApplicationService {
         );
     }
 }
-
-/* Anonymous Execute Window */
-
-Application__c app = [
-    SELECT Id
-    FROM Application__c
-    LIMIT 1
-];
-
-ApplicationService.processApplication(app.Id);
