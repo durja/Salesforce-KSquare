@@ -1,4 +1,4 @@
-# 🚀 Sprint 04 – My First Lightning Web Component (LWC)
+# 🚀 Sprint 03 – My First Lightning Web Component (LWC)
 
 ## 📌 Overview
 
