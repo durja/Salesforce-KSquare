@@ -27,12 +27,3 @@ public with sharing class ApplicationBatch
         System.debug('Batch Completed');
     }
 }
-
-/* Anonymous Execute Window */
-
-Id jobId = Database.executeBatch(
-    new ApplicationBatch(),
-    200
-);
-
-System.debug('Batch Job Id: ' + jobId);
